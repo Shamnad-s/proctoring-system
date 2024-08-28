@@ -1,0 +1,15 @@
+<div class="proctoring-container">
+  <h2 class="title">Proctoring System</h2>
+
+  <app-notification *ngIf="notificationMessage" [message]="notificationMessage" [type]="notificationType"></app-notification>
+  
+  <div class="video-wrapper">
+    <video #videoElement autoplay></video>
+    <canvas #overlayCanvas></canvas>
+  </div>
+  
+  <div class="controls">
+    <button class="btn start" (click)="startProctoring()">Start Proctoring</button>
+    <button class="btn stop" (click)="stopRecording()">Stop and Download Recording</button>
+  </div>
+</div>

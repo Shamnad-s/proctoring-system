@@ -1,0 +1,105 @@
+/* Container for the proctoring system */
+.proctoring-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border-radius: 15px;
+  box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
+}
+
+/* Title styling */
+.title {
+  font-size: 28px;
+  color: #444;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Wrapper for the video element */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  margin-bottom: 25px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.5);
+  height: 200px;
+}
+
+.video-wrapper video,
+.video-wrapper canvas {
+  max-height: 100%; /* Ensure video and canvas fit within the wrapper */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for the video element */
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  filter: brightness(95%);
+}
+
+/* Styling for the control buttons */
+.controls {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
+    -4px -4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
+    -2px -2px 5px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3),
+    -1px -1px 3px rgba(255, 255, 255, 0.2);
+}
+
+.btn.start {
+  background-color: #28a745;
+}
+
+.btn.start:hover {
+  background-color: #218838;
+}
+
+.btn.stop {
+  background-color: #dc3545;
+}
+
+.btn.stop:hover {
+  background-color: #c82333;
+}

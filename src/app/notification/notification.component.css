@@ -1,0 +1,24 @@
+.notification {
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.info {
+  background-color: #007bff;
+}
+
+.warning {
+  background-color: #ffc107;
+  color: black;
+}
+
+.error {
+  background-color: #dc3545;
+}
